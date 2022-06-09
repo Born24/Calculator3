@@ -25,6 +25,7 @@ public class Calculator {
                 break;
             default:
                 throw new Exception("Не верный формат ввода");
+
         }
         return answer;
     }

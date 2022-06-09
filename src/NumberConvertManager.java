@@ -1,5 +1,9 @@
 public class NumberConvertManager {
     public static String transform_number_to_roman_numeral(int number) {
+        if (number <= 0) {
+            throw new ArithmeticException("В римской системе счисления не может быть отрицательных чисел и 0");
+        }
+
         int[] roman_value_list = new int[]{100, 90, 50, 40, 10, 9, 5, 4, 1};
         String[] roman_char_list = new String[]{"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
         StringBuilder res = new StringBuilder();
